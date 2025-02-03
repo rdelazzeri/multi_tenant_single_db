@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Partner Detail</title>
+</head>
+<body>
+    <h2>Partner Detail</h2>
+    <p>Name: {{ partner.name }}</p>
+    <p>Address: {{ partner.address }}</p>
+    <a href="{% url 'partner:partners_list' %}">Back to Partners List</a>
+</body>
+</html>

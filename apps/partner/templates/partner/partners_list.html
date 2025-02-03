@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Partners List</title>
+</head>
+<body>
+    <h2>Partners List</h2>
+    <ul>
+        {% for partner in partners %}
+            <li>
+                <a href="{% url 'partner:partner_detail' partner.pk %}">{{ partner.name }}</a>
+                <a href="{% url 'partner:partner_edit' partner.pk %}">Edit</a>
+                <a href="{% url 'partner:partner_delete' partner.pk %}">Delete</a>
+            </li>
+        {% endfor %}
+    </ul>
+    <a href="{% url 'partner:partner_create' %}">Create New Partner</a>
+</body>
+</html>
